@@ -85,7 +85,7 @@
         }
         return false;
     }
-  void Sudoku::print()
+	void Sudoku::print()
     {
         for(int i = 0; i < n; ++i)
         {
@@ -98,12 +98,3 @@
     }
 
 
-
-int main()
-{
-    Sudoku game;
-    game.enterDigits();
-    if(game.solve())
-        game.print();
-}
-                          
