@@ -16,13 +16,13 @@
 
 
 
-     bool Sudoku::isValidPlace(int row, int col, int digit)
+     bool Sudoku::isValidPlace(const int& row, const int& col, const int& digit) const
     {
         return !isPresentInRow(row, digit) && !isPresentInCol(col, digit) && !isPresentInBox(row - row % 3, col - col % 3, digit);
     }
 
 
-    bool Sudoku::isPresentInBox(int startRow, int startCol, int digit)
+    bool Sudoku::isPresentInBox(const int& startRow, const int& startCol, const int& digit) const
     {
         for(int row = 0; row < 3; ++row)
         {
@@ -35,7 +35,7 @@
         return false;
     }
 
-    bool Sudoku::isPresentInCol(int col, int digit)
+    bool Sudoku::isPresentInCol(const int& col, const int& digit) const
     {
         for(int row = 0; row < n; ++row)
         {
@@ -45,7 +45,7 @@
         return false;
     }
 
-    bool Sudoku::isPresentInRow(int row, int digit)
+    bool Sudoku::isPresentInRow(const int& row, const int& digit) const
     {
         for(int col = 0; col < n; ++col)
         {
@@ -85,7 +85,7 @@
         }
         return false;
     }
-	void Sudoku::print()
+	void Sudoku::print() const
     {
         for(int i = 0; i < n; ++i)
         {
