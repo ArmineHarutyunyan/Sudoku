@@ -85,7 +85,7 @@
         return false;
     }
 	
-	void Sudoku::print() const
+    void Sudoku::print() const
     {
         for(int i = 0; i < n; ++i)
         {
