@@ -1,6 +1,4 @@
-#include <iostream>
 #include "Sudoku.h"
-
 
 
     void Sudoku::enterDigits()
@@ -9,7 +7,11 @@
         {
             for(int j = 0; j < n; ++j)
             {
-                std::cin >> board[i][j];
+		int a;
+                std::cin >> a; 
+		if(a < 0 || a > 9)
+			throw std::logic_error("This is an invalid Sudoku\n");	
+		board[i][j] = a;
             }
         }
     }
